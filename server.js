@@ -16,7 +16,7 @@ server.on('request', (req, res) => {
       <head>
         <title>Chat App</title>
       </head>
-            <style>
+      <style>
       body {
         font-family: Arial, sans-serif;
         margin: 0;
