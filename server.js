@@ -82,7 +82,7 @@ server.on('request', (req, res) => {
       .chat-input button {
         padding: 5px 10px;
         margin-left: 10px;
-        background-color: #007BFF;
+        background-color: rgb(232, 74, 74);
         color: #fff;
         border: none;
         border-radius: 3px;
