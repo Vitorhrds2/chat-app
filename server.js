@@ -23,7 +23,7 @@ server.on('request', (req, res) => {
         <button id="send-button">Enviar</button>
         
         <script>
-          const socket = new WebSocket('ws://localhost:${PORT}');
+          const socket = new WebSocket('wss://https://chat-app-ea03.onrender.com');
 
           const chatWindow = document.getElementById('chat-window');
           const messageInput = document.getElementById('message-input');
