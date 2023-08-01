@@ -57,7 +57,7 @@ function enviarMensagemNormal(sender, message) {
   socket.send(`${sender}|${message}`);
 
     // Enviar a mensagem para o servidor backend
-    fetch('http://localhost:3000/api/mensagens/', {
+    fetch('http://chat-app-ea03.onrender.com/api/mensagens/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ function updateMessageHistory(oldName, newName) {
 // Função para consultar todas as mensagens associadas a um nome de usuário no banco de dados
 async function consultarMensagensDoUsuario(userName) {
   try {
-    const response = await fetch(`http://localhost:3000/api/mensagens/${userName}`);
+    const response = await fetch(`http://chat-app-ea03.onrender.com/api/mensagens/${userName}`);
     const data = await response.json();
 
     // Limpar o chat antes de exibir as mensagens recuperadas
