@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://localhost:4000');
+const socket = new WebSocket('wss://chat-app-ea03.onrender.com');
 const chatWindow = document.getElementById('chat-messages');
 
 const nameInput = document.getElementById('name-input');
