@@ -11,12 +11,14 @@ const bodyParser = require('body-parser');
 const wss = new WebSocket.Server({ server });
 const connectedUsers = [];
 
+require('dotenv').config();
+
 // Configuração do banco de dados MySQL
 const connection = mysql.createConnection({
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
-  database: process.env.database,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
 
 // Conectar-se ao banco de dados
