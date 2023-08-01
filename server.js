@@ -13,10 +13,10 @@ const connectedUsers = [];
 
 // Configuração do banco de dados MySQL
 const connection = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'vitorhrds',
-  password: 'vitor12345',
-  database: 'chat_app_db',
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database,
 });
 
 // Conectar-se ao banco de dados
