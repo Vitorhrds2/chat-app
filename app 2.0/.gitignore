@@ -1,0 +1,5 @@
+.env
+chat_app_db.db
+chat_app_db.sql
+uploads
+node_modules

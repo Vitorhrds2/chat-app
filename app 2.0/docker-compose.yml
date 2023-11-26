@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "4000:4000"
+      - "3000:3000"
+    volumes:
+      - .:/app1
+      - /node_modules
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_DATABASE=chat_app_db
+    command: node server.js
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=chat_app_db
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./chat_app_db.sql:/docker-entrypoint-initdb.d/chat_app_db.sql
+volumes:
+  db_data:
